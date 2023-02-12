@@ -20,8 +20,8 @@ public class ConsultarPessoas1 {
 		List<Pessoa> pessoas = new ArrayList<>();
 		
 		while(resultSet.next()) {
-			int codigo = resultSet.getInt(0);
-			String nome = resultSet.getString(1);
+			int codigo = resultSet.getInt(1);
+			String nome = resultSet.getString(2);
 			pessoas.add(new Pessoa(codigo, nome));
 		}
 		

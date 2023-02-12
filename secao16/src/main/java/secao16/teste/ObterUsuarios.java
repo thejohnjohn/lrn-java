@@ -23,7 +23,7 @@ public class ObterUsuarios {
 		List<Usuario> usuarios = typedQuery.getResultList();
 		
 		for(Usuario usuario: usuarios) {
-			System.out.println(usuario.getNome());
+			System.out.format("Nome: %s ; Email: %s\n", usuario.getNome(), usuario.getEmail());
 		}
 		
 		entityManager.close();
