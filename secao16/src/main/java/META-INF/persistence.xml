@@ -10,7 +10,8 @@
         <class>secao16.umpraum.Assento</class>
         <class>secao16.umpramuitos.Pedido</class>
         <class>secao16.umpramuitos.ItemPedido</class>
-
+        <class>secao16.muitospramuitos.Tio</class>
+        <class>secao16.muitospramuitos.Sobrinho</class>
         <properties>
             <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
             <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost/exercicios_jpa" />

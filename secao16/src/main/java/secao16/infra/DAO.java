@@ -29,6 +29,10 @@ public class DAO<E> {
         entityManager = entityManagerFactory.createEntityManager();
     }
 
+    public void fechar() {
+        entityManager.close();
+    }
+
     public DAO<E> abrirT() {
         entityManager.getTransaction().begin();
         return this;
@@ -49,7 +53,7 @@ public class DAO<E> {
     }
 
     public E obterporID(Object id) {
-        return entityManager.find(classe, id);
+        return entityManager.find(this.classe, id);
     }
 
     public List<E> obterTodos() {

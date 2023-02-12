@@ -13,11 +13,7 @@ public class Pedido {
     @Column(nullable = false)
     private Date data;
 
-    public void setItemPedidos(List<ItemPedido> itemPedidos) {
-        this.itemPedidos = itemPedidos;
-    }
-
-    @OneToMany(mappedBy = "Pedido")
+    @OneToMany(mappedBy = "pedido", fetch = FetchType.EAGER)
     private List<ItemPedido> itemPedidos;
 
     public Pedido() {
@@ -42,5 +38,13 @@ public class Pedido {
 
     public void setData(Date data) {
         this.data = data;
+    }
+
+    public List<ItemPedido> getItemPedidos() {
+        return itemPedidos;
+    }
+
+    public void setItemPedidos(List<ItemPedido> itemPedidos) {
+        this.itemPedidos = itemPedidos;
     }
 }
